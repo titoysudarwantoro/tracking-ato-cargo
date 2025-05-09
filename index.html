@@ -26,9 +26,15 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       white-space: pre-wrap;
     }
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 150px;
+    }
   </style>
 </head>
-<img src="FIX_ATO_CARGO-min-removebg-preview.png" alt="Logo ATO Cargo" style="max-width: 200px;" />
+<body>
+  <img src="FIX_ATO_CARGO-min-removebg-preview.png" alt="Logo ATO Cargo" class="logo">
   <h2>Cek Resi Pengiriman ATO Cargo</h2>
   <input type="text" id="resi" placeholder="Masukkan Nomor Resi" />
   <button onclick="cekResi()">Cek Sekarang</button>
@@ -49,14 +55,10 @@
             hasilDiv.innerText = "⚠️ " + data.error;
           } else {
             hasilDiv.innerText =
-              `📦 Nomor Resi: ${data.resi}
-` +
-              `👤 Nama: ${data.nama}
-` +
-              `📍 Lokasi Terakhir: ${data.lokasi}
-` +
-              `🕒 Tanggal Update: ${data.tanggal}
-` +
+              `📦 Nomor Resi: ${data.resi}\n` +
+              `👤 Nama: ${data.nama}\n` +
+              `📍 Lokasi Terakhir: ${data.lokasi}\n` +
+              `🕒 Tanggal Update: ${data.tanggal}\n` +
               `✅ Status: ${data.status}`;
           }
         })
